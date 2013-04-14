@@ -1,0 +1,88 @@
+/* reset */
+*{padding:0;margin:0;}
+
+/* global */
+footer.fixed-bottom{
+    position:absolute;
+    width:100%;
+    bottom:10px;
+    text-align: center;
+    color:#ccc;
+}
+/* index */
+.index, .status-page, #wrap{height:100%;position:relative;}
+#wrap{background:url(../img/bg.jpg) center no-repeat;}
+.login-box{
+    width:300px;
+    height:220px;
+    padding:10px;
+    background:rgba(0,0,0,0.15);
+    color:#fff;
+    position: absolute;
+    left:30px;
+    margin:auto 0;
+    top:0;
+    bottom:0;
+}
+.login-box h1{
+    padding:0 0 10px;
+    font-size:3em;
+    font-weight:normal;
+    text-shadow: 1px 1px 2px #333;
+}
+.login-btns{
+    margin:40px 0 0;
+    height:40px;
+}
+.login-btns a{
+    display: block;
+    width:138px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#52a8e8), to(#377ad0));
+    border-top: 1px solid #4081af;
+    border-right: 1px solid #2e69a3;
+    border-bottom: 1px solid #20559a;
+    border-left: 1px solid #2e69a3;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    float: left;
+    height:35px;
+    text-align:center;
+    color:#fff;
+    text-decoration:none;
+}
+.login-btns a span{
+    line-height:35px;
+    padding:0 0 0 20px;
+    background:url(../img/sina_logo.png) left top no-repeat;
+}
+a.login-tt{float:right;}
+a.login-tt span{background:url(../img/tt_logo.png) left top no-repeat;}
+
+/* auth_status */
+.auth-status{
+    width:600px;
+    height:200px;
+    background:rgba(255,255,255,0.7);
+    border-radius:8px;
+    position: absolute;
+    margin:auto 0 auto -300px;
+    top:0;
+    bottom:0;
+    left:50%;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+.auth-status p{
+    text-align: center;
+}
+.auth-no, auth-ok{
+
+}
+.auth-tips{
+    padding:8% 0;
+    font-size:1.5em;
+    color:#333;
+}
+.next-link{
+    color:#377ad0;
+    text-decoration: none;
+}
