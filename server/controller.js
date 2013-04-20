@@ -20,14 +20,19 @@ exports.getWeibo = function(){
         });
         req.addListener('end', function(){
             postData = JSON.parse(postData);
-            this.token = postData['token'];
-
-            weibo.getTimelineAll(this.token, function(obj){
-                context.render(obj);
+            if(postData.method === 'topic'){
+                weibo.getBytopic(postData, function(data){
+                    context.render(data);
+                });
+            }
+            weibo.getTimelineAll(postData, function(data){
+                context.render(data);
             });
         });
     } else {
         context.render500();
     }
 }
+
+
 

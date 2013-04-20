@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html class="index">
+<html manifest="/config/manifest">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>麦足迹</title>
@@ -7,21 +7,38 @@
     <meta name="copyright" content="Copyright (c) 2013 wheato."/>
     <meta name="description" content=""/>
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/com.css">
+    <link rel="stylesheet" href="../css/com.css">
 </head>
-<body class="index">
-    <div id="wrap">
-        <div class="login-box">
-            <h1>麦足迹</h1>
-            <p>欢迎使用麦足迹，您可以通过麦足迹选取您的微博，生成您的微博足迹！</p>
-            <div class="login-btns">
-                <a class="login-sina" href="#"><span>新浪微博</span></a>
-                <a class="login-tt" href="#"><span>腾讯微博</span></a>
-            </div>
-        </div>
-        <footer class="fixed-bottom">
-            <p>Copyright &copy; 2013 Developed by wheato</p>
-        </footer>
-    </div>
+<body>
+<script type="text/javascript">
+(function(){
+    "use strict";
+    var ajax = function(url, options, callback){
+        var httpRequest;
+
+        options = {
+            method: options.method || 'get',
+            data: options.data || '',
+            arguments: options.arguments || null,
+            isAsync: options.isAsync || true,
+
+        };
+
+        url  = url || '';
+
+        if(window.XMLHttpRequest){
+            httpRequest = new window.XMLHttpRequest();
+        } else {
+            httpRequest = new window.ActiveXObject();
+        }
+
+    }
+
+})();
+</script>
 </body>
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/underscore.js"></script>
+<script type="text/javascript" src="js/lib/backbone.js"></script>
+<script type="text/javascript" src="js/lib/foot.weibo.js"></script>
 </html>
