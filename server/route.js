@@ -16,22 +16,21 @@ exports.handler = function(req, res){
 var map = {
     '/' : 'index',
     '/timeline' : 'getWeibo',
-    '/reqcode' : 'reqCode'
+    '/gettoken' : 'getToken'
 }
 
 var controllerContext = function(req, res){
     this.req = req;
     this.res = res;
-    this.render404 = render404;
-    this.render500 = render500;
+    //this.render404 = render404;
+    //this.render500 = render500;
     this.token;
 }
 controllerContext.prototype.render = function(obj){
-    this.res.writeHead(200, {'Content-Type' : 'application/json; charset=UTF-8', 'Date' : new Date().toUTCString(), 'Expires' : new Date().toUTCString(), 'Cache-Control' : 'private, max-age=0', 'Access-Control-Allow-Origin' : 'http://127.0.0.1:80', 'Access-Control-Allow-Credentials' : 'true'});
+    this.res.writeHead(200, {'Content-Type' : 'application/json; charset=UTF-8', 'Date' : new Date().toUTCString(), 'Expires' : new Date().toUTCString(), 'Cache-Control' : 'private, max-age=0', 'Access-Control-Allow-Origin' : 'http://127.0.0.1', 'Access-Control-Allow-Credentials' : 'true'});
     if(typeof(obj) === 'object') {
         this.res.end(JSON.stringify(obj));
     } else {
         this.res.end();
     }
-
 }

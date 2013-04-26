@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html manifest="/config/manifest">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>麦足迹</title>
@@ -7,38 +7,24 @@
     <meta name="copyright" content="Copyright (c) 2013 wheato."/>
     <meta name="description" content=""/>
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="../css/com.css">
+    <link rel="stylesheet" href="css/com.css">
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/underscore.js"></script>
+    <script type="text/javascript" src="js/lib/backbone.js"></script>
+    <script type="text/javascript" src="js/lib/foot.weibo.js"></script>
+    <script type="text/javascript" src="js/foot.model.js"></script>
+    <script type="text/javascript" src="js/foot.collections.js"></script>
+    <script type="text/javascript" src="js/foot.router.js"></script>
+    <script type="text/javascript" src="js/foot.view.js"></script>
+
 </head>
 <body>
 <script type="text/javascript">
 (function(){
-    "use strict";
-    var ajax = function(url, options, callback){
-        var httpRequest;
-
-        options = {
-            method: options.method || 'get',
-            data: options.data || '',
-            arguments: options.arguments || null,
-            isAsync: options.isAsync || true,
-
-        };
-
-        url  = url || '';
-
-        if(window.XMLHttpRequest){
-            httpRequest = new window.XMLHttpRequest();
-        } else {
-            httpRequest = new window.ActiveXObject();
-        }
-
-    }
 
 })();
 </script>
+<script type="text/javascript" src="js/foot.app.js"></script>
 </body>
-<script type="text/javascript" src="js/lib/jquery.js"></script>
-<script type="text/javascript" src="js/lib/underscore.js"></script>
-<script type="text/javascript" src="js/lib/backbone.js"></script>
-<script type="text/javascript" src="js/lib/foot.weibo.js"></script>
+
 </html>

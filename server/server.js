@@ -3,7 +3,7 @@ var http = require('http'),
     route = require('./route');
 
 exports.runServer = function(port){
-    port = port || 8888;
+    port = port || 7001;
     http.createServer(function(req, res){
         handleRequest(req, res);
     }).listen(port);
