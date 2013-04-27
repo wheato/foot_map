@@ -64,5 +64,17 @@ exports.getWeibo = function(){
     }
 }
 
-
+var shasum = function(filePath, callback) {
+    var sha = crypto.createHash('sha1');
+	var s = fs.ReadStream(filePath);
+	s.on('data', function(d) {
+		sha.update(d);
+	});
+	s.on('end', function() {
+		callback(null, sha.digest('hex'));
+	});
+	s.on('error', function(err) {
+		callback(err);
+	});
+};
 
